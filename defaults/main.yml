@@ -5,8 +5,8 @@
 # Distributions found here: https://nodejs.org/dist/
 nodejs_version: "8.9.1"
 
-# Configure additional NPM repositories.
-npm_repos: [""]
+# Configure additional NPM registries.
+npm_registries: []
 
 # List of node packages to install.
-npm_pkgs: [""]
+npm_pkgs: []
