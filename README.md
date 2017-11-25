@@ -6,16 +6,17 @@ Installs Node.js on RHEL/CentOS or Debian/Ubuntu.
 
 Requires the following to be executed in Powershell on the target machine(s):
 ```
-Set-ExecutionPolicy RemoteSigned
-https://github.com/ansible/ansible/blob/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
+> Set-ExecutionPolicy RemoteSigned
 ```
+Download and execute this Powershell script: [ConfigureRemotingForAnsible.ps1](https://github.com/ansible/ansible/blob/devel/examples/scripts/ConfigureRemotingForAnsible.ps1)
 
 ## Role Variables
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 ```
 nodejs_version: "8.9.1"
-npm_repos: [""]
+npm_registries: []
+npm_pkgs: []
 ```
 
 ## Dependencies
@@ -23,6 +24,10 @@ npm_repos: [""]
 None.
 
 ## Example Playbook
+```
+$ ansible-galaxy install stockhausenj.ansible_win_nodejs
+$ ansible-playbook -i inventory.yaml setup-nodejs.yaml -u admin --ask-pass
+```
 ```
 - hosts: all
   vars:
@@ -35,7 +40,7 @@ None.
         name: stockhausenj.ansible_win_nodejs
       vars:
         nodejs_version: "8.9.1"
-        npm_repos: ["@myrepo:registry=http://localhost:1234/"]
+        npm_registries: ["@myrepo:registry=http://localhost:1234/"]
         npm_pkgs: ["express","@myrepo/just.for.fun@latest"]
 ```
 ## License
