@@ -10,3 +10,6 @@
 - name: Add NPM Repositories
   win_shell: npm config set {{ item }}
   with_items: "{{ npm_repos }}"
+- name: Globally Install NPM Packages
+  win_shell: npm i g {{ item }}
+  with_items: "{{ npm_repos }}"

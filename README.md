@@ -35,7 +35,8 @@ None.
         name: stockhausenj.ansible_win_nodejs
       vars:
         nodejs_version: "8.9.1"
-        npm_repos: ["@xpkit:registry=http://kiosk.xp.imagination.net:4873/"]
+        npm_repos: ["@myrepo:registry=http://localhost:1234/"]
+        npm_pkgs: ["express","@myrepo/just.for.fun@latest"]
 ```
 ## License
 

@@ -7,3 +7,6 @@ nodejs_version: "8.9.1"
 
 # Configure additional NPM repositories.
 npm_repos: [""]
+
+# List of node packages to install.
+npm_pkgs: [""]
