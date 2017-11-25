@@ -23,11 +23,20 @@ npm_repos: [""]
 None.
 
 ## Example Playbook
-
+```
 - hosts: all
+  vars:
+    ansible_port: 5986
+    ansible_connection: winrm
+    ansible_winrm_server_cert_validation: ignore
+  tasks:
   roles:
-    - role
-
+    - include_role:
+        name: stockhausenj.ansible_win_nodejs
+      vars:
+        nodejs_version: "8.9.1"
+        npm_repos: ["@xpkit:registry=http://kiosk.xp.imagination.net:4873/"]
+```
 ## License
 
 MIT
