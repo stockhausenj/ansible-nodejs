@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: stockhausenj
+  description: Node.js installation for Windows
+  company: ""
+  license: "license (MIT)"
+  min_ansible_version: 2.4
+  platforms:
+    - name: Windows
+      versions:
+      - 10
+  galaxy_tags:
+    - development
+    - web
+dependencies: []

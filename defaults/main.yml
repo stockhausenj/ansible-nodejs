@@ -1,0 +1,9 @@
+---
+# defaults file for win_nodejs---
+
+# Set the version of Node.js to install ("8.9.1")
+# Distributions found here: https://nodejs.org/dist/
+nodejs_version: "8.9.1"
+
+# Configure additional NPM repositories.
+npm_repos: [""]

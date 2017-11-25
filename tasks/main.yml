@@ -1,0 +1,12 @@
+---
+- name: Download earthrise.jpg to specified path
+  win_get_url:
+	  url: https://nodejs.org/dist/v8.9.1/node-v8.9.1-x86.msi
+	  dest: C:\Users\{{ ansible_user }}\Downloads\nodejs-install.msi
+- name: Install Node.js
+  win_package:
+    path: C:\Users\{{ ansible_user }}\Downloads\nodejs-install.msi
+    state: present
+- name: Add NPM Repositories
+  win_command: npm config set {{ item }}
+  with_shell: {{ npm_repos }}
