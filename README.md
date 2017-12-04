@@ -25,7 +25,7 @@ None.
 
 ## Example Playbook
 ```
-$ ansible-galaxy install stockhausenj.ansible_win_nodejs
+$ ansible-galaxy install stockhausenj.win-nodejs
 $ ansible-playbook -i inventory.yaml setup-nodejs.yaml -u admin --ask-pass
 ```
 ```
