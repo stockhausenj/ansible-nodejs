@@ -1,6 +1,6 @@
 # Ansible Role: Windows Node.js
 
-Installs Node.js on RHEL/CentOS or Debian/Ubuntu.
+Installs Node.js on Windows.
 
 ## Requirements
 
